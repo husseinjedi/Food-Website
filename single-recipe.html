@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single-Recipe || Final</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-2.css" />
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB7CAMAAABjGQ9NAAAAmVBMVEX6+voAAAD///8NDQ3zBQXk5OS0tLSRkZH39/ehoaGIiIjn5+fy8vLb29vW1tbGxsbPz8+qqqpZWVlycnL/BAlcCQ01NTV+fn7AwMAhISGZmZlpaWlMTEx5DApSUlJeXl5BQUEtLS0YGBjfBgYhDQ0bIB5ob29RBgkbBwoABQyPCwtoCwpWCwcRDBQkDRIpDAwADw2bCwjLCAi0NtrcAAAEXklEQVRoge2YaXPbOAyGBTCiLuqwldUdS7LTTZvtdo///+MWkCgfqZ0eojv7ge9MxmZs8xFAAATpOFZWVlZWVlZWVlZWVlZWVlZWVv9DISqlEH8d7vTWl21RD6V7R/gFLmyWEWY1zKrQNwyc5aATyCMuFrDXj4ISIIwR3RYgNmg5ou8mWSqDcoOqg8LRc6sagmgjeYgxiIwfA50WdubA7qYvtD8DHKBMkmSCYw4lPQq0PjlkC1U0hAx3jRmOUSgABBR9HjbS94hEXvWQnwmECkAICP2NCzuGMhN72BhhY1LAGMQhTcei6SPJuMBJMYQSPRoIsYMQmiO7gdAEm+cLyaUeeZuHIbT0RzTIIa4hw4QWgi0PKboXdmCIPQAn0cJWA+EymOBlDDVn1nZfQ4/tBbsxwCbOoJwjm62khZYFGdtTUuU45UBCa12e+dwzst7L0i1sCVt+UVFKvm+0eZReA24osSLNbsk5BtilXmfN9hacSw9RavPIGx0SV2q2U4Baj+bYOrFJ+YKLz9kpDWi0TwTM+T0YQDvkynlNGwhUUpE3jziOd+2EDae702u76bueqRRLKMO6uaw55TluQ/xp0EI6PeAca6qAyExp6blAenUNXVlKyh6NKymlYoB5v4Ixml7Zbi4FuamKWnQUOEqvdwpinrcGhX7BwYAnH6sR0sijJzG0jWGkzmvLCHLOtRLZ8aLyfQm1hlEEUOEfTe6gzolNr3sXMdtPS0p7FwwFR4T+msqh8ExZ/ZbtkJ9hS9vm3D6gtwfIz2Doz+2FCeTSIB3ZDm+gsFvqFoMuekN+76fKX98wNnU9WYXxQHGt/6lc9a5lmDRe3MTuKjJlFKmm3MUKiuj472+YhF7ap4GXrGLT2vJeyaGE7vc3vv4uKZu0XYXGREyCUTk/ED6Y9UG1TdfVF9q7Nbx8Z56vPsK2GrIwlGbY4uaWiBhlyeUhCLNBhnm6i2785Dvl7hf2DSMw6T8AfPj9LBbQ2YV92sm1JZ16Nc2+3n7xSeT55eUjVdbj51xni1wOaxsXnucdu2lNPr0eHh4OTyCWEo6uoIpOlW/1gUwV8N56b+H18YH0+AftrHo3yadfnArRT4vbUp4puDoTHcAmNFn+sdZLjmL6QWeiVYw7Lm3D1c8kPGn24+epcXGmnoLZiQE27UtxEnW6WbnN/m1xMvkcwEy75kznbjr7XDnjXGNzdOb9urLyhkKHoPAW++n1xObNp0Kz9y0Mz99Wz5l9EH8ubOSWyaTNmkNd//CmDdPsL8+ajdEODOTWFbhLAR9cmK7Zf83sFKWAwkh8fw1X5NAuPb9iumAH1Mfn6l6XW5gOdPCtfDzdKzH7+cvD48PnvwHG6k7gCeYH1JUOTazvuxa7D/+8UPnz7mb0OR3qPEhdRT3c0+HfVyE+cTW5M3miYxyOcKm6zH7RFSrfNUkv3xXjOBZdG8r4m42rYTw6iuWj4SpmZWVlZWVlZWVlZWVlZWVlZWX1Y/oPdKg3qoUX0HEAAAAASUVORK5CYII="
+      type="image/x-icon"
+    />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="   sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <h2 class="logo">Food<span>Website</span></h2>
+          </a>
+          <button class="nav-btn btn">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link"
+            ><i class="fa-solid fa-house fa-bounce"></i> home
+          </a>
+          <a href="About.html" class="nav-link">
+            <i class="fa-sharp fa-solid fa-address-card fa-bounce"></i> about
+          </a>
+          <a href="Recipes.html" class="nav-link">
+            <i class="fa-solid fa-bowl-food fa-bounce"></i>recipes
+          </a>
+
+          <div class="nav-link contact-link">
+            <a href="Contact.html" class="btn"
+              ><i class="fa-sharp fa-solid fa-phone fa-bounce"></i>contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="./images/recipes/recipe-1.jpg"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Dessert</h2>
+            <p>
+              Dessert is a course that concludes a meal. The course consists of
+              sweet foods, such as candy, and possibly a beverage such as
+              dessert wine and liqueur. In some parts of the world there is no
+              tradition of a dessert course to conclude a meal.
+            </p>
+          </article>
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>Weighing and measuring</p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>Creaming and Piping and lining (moulds)</p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Addition of colour or flavour, folding, moulding, mixing,
+                aeration, slicing, portioning, chilling, combining, puréeing.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Sugar</p>
+              <p class="single-ingredient">Flour</p>
+              <p class="single-ingredient">Butter</p>
+              <p class="single-ingredient">Eggs</p>
+              <p class="single-ingredient">
+                various flavorings such as cocoa powder or vanilla extract
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <!-- End of Dessert-->
+
+    <!-- Pasta-->
+    <main id="Pasta" class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="./images/recipes/recipe-2.jpg"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Pasta</h2>
+            <p>
+              Pasta is a type of food typically made from an unleavened dough of
+              wheat flour mixed with water or eggs, and formed into sheets or
+              other shapes, then cooked by boiling or baking.
+            </p>
+          </article>
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Ingredients. Fresh Pasta Dough and Weigh the Flour. Set your
+                scale to grams.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>
+                Beat the Eggs. Crack two eggs into a medium bowl and Form a Well
+                and Add Eggs and Fold
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Break Up Large Clumps, Make a Ball of Dough and Knead and Rest
+                the Dough and Cut the Dough.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 4</p>
+                <div></div>
+              </header>
+              <p>
+                Shape the Dough for Rolling, Roll the Dough and Cut the Noodles
+                and finally Check for Quality.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Milled wheat</p>
+              <p class="single-ingredient">
+                Water, eggs (for egg noodles or egg spaghetti)
+              </p>
+              <p class="single-ingredient">
+                and sometimes optional ingredients.
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <!-- End of Pasta-->
+
+    <!-- Salad -->
+    <main id="Salad" class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="./images/recipes/recipe-3.jpg"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Salad</h2>
+            <p>
+              A salad is a dish consisting of mixed ingredients, frequently
+              vegetables. They are typically served chilled or at room
+              temperature, though some can be served warm. Condiments and salad
+              dressings, which exist in a variety of flavors, are often used to
+              enhance a salad.
+            </p>
+          </article>
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Place salad greens in a salad bowl and top with tomatoes,
+                cucumbers, onion, and carrot.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>Place oil, vinegar and sugar in a small plastic container.</p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Put the lid on the container and shake dressing until sugar
+                dissolves, about 1 minute. Pour dressing over salad.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Varieties of lettuce</p>
+              <p class="single-ingredient">Garden cress and watercress</p>
+              <p class="single-ingredient">
+                Endives, Cabbage, Spinach, Escarole,
+              </p>
+              <p class="single-ingredient">Romaine (cos)</p>
+              <p class="single-ingredient">Arugula, and fresh herbs.</p>
+              <p class="single-ingredient">
+                Other vegetables, raw or cooked—tomatoes, onions, cucumbers,
+                peppers, beets, and so on—may garnish the green salad.
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <!-- End of Salad -->
+    <!-- Burger -->
+    <main id="Burger" class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="./images/recipes/recipe-4.jpg"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Burger</h2>
+            <p>
+              A hamburger, or simply burger, is a sandwich consisting of
+              fillings—usually a patty of ground meat, typically beef—placed
+              inside a sliced bun or bread roll.
+            </p>
+          </article>
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>Divide the ground beef, Shape the patties and Warm the pan</p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>
+                Toast the buns, Increase the heat to medium-high and Cook the
+                burgers for 3 to 5 minutes
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Flip the burgers and cook another 3 to 5 minutes and lastly To
+                make cheeseburgers.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Quality meat</p>
+              <p class="single-ingredient">Salt</p>
+              <p class="single-ingredient">
+                Pepper, is all we add to our simple burger recipe
+              </p>
+              <p class="single-ingredient">
+                We've tried adding extras — Olive oil
+              </p>
+              <p class="single-ingredient">
+                Cream, mustard, and grated onion to name a few.
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <!-- End of Burger -->
+
+    <!-- Pizza -->
+    <main id="Pizza" class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="./images/recipes/recipe-5.jpg"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Pizza</h2>
+            <p>
+              Pizza is a dish of Italian origin consisting of a usually round,
+              flat base of leavened wheat-based dough topped with tomatoes,
+              cheese, and often various other ingredients, which is then baked
+              at a high temperature, traditionally in a wood-fired oven.
+            </p>
+          </article>
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Start with a solid pizza dough recipe, Make the dough and Proof
+                the dough
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>Prepare the sauce and toppings and Shape the dough.</p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>Bake the pizza and finally Cool the pizza.</p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Olive oil, Flour, yeast,</p>
+              <p class="single-ingredient">Mozzarella cheese</p>
+              <p class="single-ingredient">White Sugar</p>
+              <p class="single-ingredient">
+                Tomatoes and onion are also common ingredients in pizza recipes.
+              </p>
+              <p class="single-ingredient">
+                Variations include: brown sugar in place of white sugar.
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <!-- End of Pizza -->
+
+    <!-- Cookies -->
+    <main id="Cookies" class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="./images/recipes/recipe-6.jpg"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Cookies</h2>
+            <p>
+              A cookie (American English), or a biscuit (British English), is a
+              baked or cooked snack or dessert that is typically small, flat and
+              sweet. It usually contains flour, sugar, egg, and some type of
+              oil, fat, or butter. It may include other ingredients such as
+              raisins, oats, chocolate chips, nuts, etc.
+            </p>
+          </article>
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>Cream Butter and Add Eggs.</p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>Add Flour, Add Additional Ingredients.</p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>Bake Cookies.</p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Viz</p>
+              <p class="single-ingredient">Flour</p>
+              <p class="single-ingredient">Sugar</p>
+              <p class="single-ingredient">Shortening</p>
+              <p class="single-ingredient">
+                And liquids (milk and/or eggs). The ingredients used in
+                preparation of cookies affect size, color, and sensory
+                qualities. Additional ingredients are also added for flavor and
+                texture.
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+    <!-- End of Cookies -->
+
+    <!-- Sandwich -->
+    <main id="Sandwich" class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="./images/recipes/recipe-7.jpg"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Sandwich</h2>
+            <p>
+              A sandwich is a food typically consisting of vegetables, sliced
+              cheese or meat, placed on or between slices of bread, or more
+              generally any dish wherein bread serves as a container or wrapper
+              for another food
+            </p>
+          </article>
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Slather your condiments on the bottom slice of bread and Add the
+                densest vegetables, like pickles, followed by the lettuce and
+                then the tomato.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>Add the cheese and Add the meat.</p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Spread another layer of condiments on the top slice of bread.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Bread</p>
+              <p class="single-ingredient">Mayonnaise/mustard</p>
+              <p class="single-ingredient">Lettuce, and Meat/toppings</p>
+              <p class="single-ingredient">Tomato and Cheese</p>
+              <p class="single-ingredient">Bread</p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <!-- End of Sandwich -->
+
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">Food Website</span> Made by
+        <a href="https://github.com/husseinjedi">Salawu-Hussein</a>
+      </p>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
